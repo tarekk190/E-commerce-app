@@ -16,8 +16,8 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between md:mx-auto p-4">
-        <Link className="flex items-center space-x-3 rtl:space-x-reverse">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-center md:justify-center md:mx-auto p-4">
+        <Link className="flex items-center space-x-3 rtl:space-x-reverse md:mr-auto">
           <span>
             <i className="fa-solid fa-cart-shopping fa-2xl text-green-600"></i>
           </span>
@@ -63,6 +63,7 @@ export default function Navbar() {
               </>
             )}
           </ul>
+
           <button
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -86,12 +87,13 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
+
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
           } items-center justify-between w-full md:flex md:w-auto md:order-1`}
         >
-          <ul className="bg-slate-100 text-gray-500 flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 md:left-auto md:right-0 absolute top-full right-0">
+          <ul className="bg-slate-100 text-gray-500 flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 md:left-auto md:right-0 absolute top-full right-0 md:right-auto md:relative">
             {userLogin !== null && (
               <>
                 <li>
